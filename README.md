@@ -19,7 +19,7 @@ Example:
 [package]
 name = "foo"
 version = "0.1.0"
-authors = ["Andrew Hobden <andrew@hoverbear.org>"]
+authors = ["Oliver Forral <intrepion@gmail.com>"]
 
 [dependencies]
 iron = "*"
