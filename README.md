@@ -23,6 +23,12 @@ heroku create --buildpack https://github.com/intrepion/heroku-buildpack-rust
 
 ## Example App
 
+Make a `Procfile` file:
+
+```
+web: target/release/intrepion-heroku-rust-iron
+```
+
 Make a `Cargo.toml` file:
 
 ```toml
