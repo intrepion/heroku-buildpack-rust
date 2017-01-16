@@ -15,6 +15,16 @@ about an unused value in the `toml` file.
 
 Example:
 
+## Instructions
+
+```bash
+heroku create --buildpack https://github.com/intrepion/heroku-buildpack-rust
+```
+
+## Example App
+
+Make a `Cargo.toml` file:
+
 ```toml
 [package]
 name = "intrepion-heroku-rust-iron"
@@ -24,28 +34,6 @@ authors = ["Oliver Forral <intrepion@gmail.com>"]
 [dependencies]
 iron = "*"
 
-[target.heroku]
-version = "nightly"
-```
-
-## Instructions
-
-```bash
-APP="intrepion-heroku-rust-iron" && \
-cargo new --bin $APP      && \
-cd $APP                   && \
-git init                  && \
-heroku create $APP --buildpack https://github.com/intrepion/heroku-buildpack-rust && \
-echo "web: target/release/$APP" > Procfile
-```
-
-## Example App
-
-After following the instructions above, in `Cargo.toml` add:
-
-```toml
-[dependencies]
-iron = "*"
 ```
 
 In `src/main.rs` let's use a simple [iron](http://ironframework.io/) demo:
@@ -73,8 +61,8 @@ fn main() {
 Now the following steps:
 
 ```bash
-git add src/main.rs Cargo.toml Procfile && \
-git commit -m "Init"                    && \
+git add src/main.rs Cargo.toml && \
+git commit -m "Init" && \
 git push heroku master
 ```
 
@@ -85,7 +73,7 @@ application's `web` dyno with:
 heroku ps:scale web=1
 ```
 
-Now you can visit [`https://$APP.herokuapp.com/`](https://intrepion-heroku-rust-iron.herokuapp.com/)
+Now you can visit the url given in the output
 and see your application!
 
 ## Testing
