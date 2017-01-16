@@ -17,7 +17,7 @@ Example:
 
 ```toml
 [package]
-name = "intrepion-rust-buildpack-test-rust-iron"
+name = "intrepion-heroku-rust-iron"
 version = "0.1.0"
 authors = ["Oliver Forral <intrepion@gmail.com>"]
 
@@ -31,7 +31,7 @@ version = "nightly"
 ## Instructions
 
 ```bash
-APP="intrepion-rust-buildpack-test-rust-iron" && \
+APP="intrepion-heroku-rust-iron" && \
 cargo new --bin $APP      && \
 cd $APP                   && \
 git init                  && \
@@ -85,7 +85,7 @@ application's `web` dyno with:
 heroku ps:scale web=1
 ```
 
-Now you can visit [`https://$APP.herokuapp.com/`](https://intrepion-rust-buildpack-test-rust-iron.herokuapp.com/)
+Now you can visit [`https://$APP.herokuapp.com/`](https://intrepion-heroku-rust-iron.herokuapp.com/)
 and see your application!
 
 ## Testing
