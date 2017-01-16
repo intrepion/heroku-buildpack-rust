@@ -1,6 +1,6 @@
 # heroku-buildpack-rust
 
-[![Build Status](https://travis-ci.org/Hoverbear/heroku-buildpack-rust.svg?branch=master)](https://travis-ci.org/Hoverbear/heroku-buildpack-rust)
+[![Build Status](https://travis-ci.org/intrepion/heroku-buildpack-rust.svg?branch=master)](https://travis-ci.org/intrepion/heroku-buildpack-rust)
 
 **Features:**
 
@@ -17,7 +17,7 @@ Example:
 
 ```toml
 [package]
-name = "foo"
+name = "intrepion-rust-buildpack-test-rust-iron"
 version = "0.1.0"
 authors = ["Oliver Forral <intrepion@gmail.com>"]
 
@@ -31,11 +31,11 @@ version = "nightly"
 ## Instructions
 
 ```bash
-APP="rust-buildpack-test" && \
+APP="intrepion-rust-buildpack-test-rust-iron" && \
 cargo new --bin $APP      && \
 cd $APP                   && \
 git init                  && \
-heroku create $APP --buildpack https://github.com/Hoverbear/heroku-buildpack-rust && \
+heroku create $APP --buildpack https://github.com/intrepion/heroku-buildpack-rust && \
 echo "web: target/release/$APP" > Procfile
 ```
 
@@ -85,7 +85,7 @@ application's `web` dyno with:
 heroku ps:scale web=1
 ```
 
-Now you can visit [`https://$APP.herokuapp.com/`](https://rust-buildpack-test.herokuapp.com/)
+Now you can visit [`https://$APP.herokuapp.com/`](https://intrepion-rust-buildpack-test-rust-iron.herokuapp.com/)
 and see your application!
 
 ## Testing
